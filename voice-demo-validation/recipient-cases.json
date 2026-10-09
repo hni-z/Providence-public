@@ -1,0 +1,16 @@
+[
+  {"id":"E01","gate":"regression","text":"Send an email to alex at example dot com saying hi","name":null,"candidate":"alex@example.com","expected":"alex@example.com"},
+  {"id":"E02","gate":"regression","text":"Email Alex at alex@example.com saying hi","name":"Alex","candidate":"alex@example.com","expected":"alex@example.com"},
+  {"id":"E03","gate":"voice","text":"Email Alex at alex at example dot com saying hi","name":"Alex","candidate":"alex@example.com","expected":"alex@example.com"},
+  {"id":"E04","gate":"regression","text":"Email first underscore last plus test at example dot com saying hi","name":null,"candidate":"first_last+test@example.com","expected":"first_last+test@example.com"},
+  {"id":"E05","gate":"voice","text":"Email first dash last at example dash domain dot com saying hi","name":null,"candidate":"first-last@example-domain.com","expected":"first-last@example-domain.com"},
+  {"id":"E06","gate":"regression","text":"Email Alex saying hi","name":"Alex","candidate":"invented@example.com","expected":null},
+  {"id":"E07","gate":"regression","text":"Email Jordan saying Alex can be reached at alex@example.com","name":"Jordan","candidate":"alex@example.com","expected":null},
+  {"id":"E08","gate":"regression","text":"Email alex at example dot com and sam at example dot com saying hi","name":null,"candidate":"alex@example.com","expected":null},
+  {"id":"E09","gate":"regression","text":"Email Alex saying hi","name":"Alex","candidate":null,"contacts":[{"name":"Alex","email":"known@example.com"}],"expected":"known@example.com"},
+  {"id":"E10","gate":"regression","text":"Email Malex saying hi","name":"Alex","candidate":"known@example.com","contacts":[{"name":"Alex","email":"known@example.com"}],"expected":null},
+  {"id":"E11","gate":"voice","text":"Email Jordan saying Alex will help","name":"Alex","candidate":null,"contacts":[{"name":"Alex","email":"known@example.com"}],"expected":null},
+  {"id":"E12","gate":"voice","text":"Email Alex and Sam saying hi","name":"Alex","candidate":null,"contacts":[{"name":"Alex","email":"alex@example.com"},{"name":"Sam","email":"sam@example.com"}],"expected":null},
+  {"id":"E13","gate":"regression","text":"Email explicit@example.com saying hi","name":"Alex","candidate":"explicit@example.com","contacts":[{"name":"Alex","email":"known@example.com"}],"expected":"explicit@example.com"},
+  {"id":"E14","gate":"voice","text":"Respond to Alex saying I can help tomorrow","name":"Alex","candidate":null,"contacts":[{"name":"Alex","email":"known@example.com"}],"expected":"known@example.com"}
+]

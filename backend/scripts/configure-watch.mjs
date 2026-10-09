@@ -1,0 +1,13 @@
+import { readFileSync, writeFileSync } from 'node:fs';
+import { parseEnv } from 'node:util';
+import { fileURLToPath } from 'node:url';
+import { resolve } from 'node:path';
+const backend = fileURLToPath(new URL('../', import.meta.url));
+const raw = process.argv[2];
+if (!raw) throw new Error('Usage: npm run configure-watch -- https://your-tunnel.trycloudflare.com');
+const url = new URL(raw);
+if (url.protocol !== 'https:' || url.username || url.password || url.search || url.hash || url.pathname !== '/' || ['localhost','127.0.0.1'].includes(url.hostname)) throw new Error('Use a reachable HTTPS origin with no credentials, path, or query.');
+const env = parseEnv(readFileSync(resolve(backend, '.env.local'), 'utf8'));
+if (!/^[a-f0-9]{64}$/i.test(env.DEMO_TOKEN || '')) throw new Error('Run npm run setup first.');
+writeFileSync(resolve(backend, '../WatchStarter/ProvidenceConfig.json'), JSON.stringify({ baseURL: url.origin, token: env.DEMO_TOKEN }, null, 2) + '\n', { mode: 0o600 });
+console.log('Wrote ignored Watch configuration. Rebuild and install the Watch app after URL/token changes.');

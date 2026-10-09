@@ -1,0 +1,54 @@
+# Dedicated Providence canonical host. Initially proxies through the existing Mac tunnel.
+map $http_upgrade $providence_canonical_connection_upgrade {
+    default upgrade;
+    '' close;
+}
+
+server {
+    listen 80;
+    listen [::]:80;
+    server_name providence.hani.so;
+    location ^~ /.well-known/acme-challenge/ {
+        root /home/developer/htn/acme;
+        default_type text/plain;
+        try_files $uri =404;
+    }
+    location / {
+        return 308 https://providence.hani.so$request_uri;
+    }
+}
+
+server {
+    listen 443 ssl http2;
+    listen [::]:443 ssl http2;
+    server_name providence.hani.so;
+    ssl_certificate /etc/letsencrypt/live/providence.hani.so/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/providence.hani.so/privkey.pem;
+    include /etc/letsencrypt/options-ssl-nginx.conf;
+    access_log /var/log/nginx/providence-canonical.access.log;
+    error_log /var/log/nginx/providence-canonical.error.log;
+    client_max_body_size 1m;
+
+    location / {
+        proxy_pass http://127.0.0.1:__UPSTREAM_PORT__;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header Authorization $http_authorization;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection $providence_canonical_connection_upgrade;
+        proxy_buffering off;
+        proxy_connect_timeout 5s;
+        proxy_read_timeout 3600s;
+        proxy_send_timeout 3600s;
+        proxy_intercept_errors on;
+        error_page 502 504 =503 /providence-gateway-unavailable;
+    }
+    location = /providence-gateway-unavailable {
+        internal;
+        default_type application/json;
+        add_header Cache-Control no-store always;
+        return 503 '{"error":"The Providence coordinator is unavailable. Restore its existing connection."}';
+    }
+}

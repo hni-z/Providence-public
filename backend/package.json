@@ -1,0 +1,29 @@
+{
+  "name": "providence-backend",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "tsx watch src/main.ts",
+    "start": "tsx src/main.ts",
+    "check": "tsc --noEmit",
+    "test": "tsx --test test/*.test.ts",
+    "setup": "node scripts/setup.mjs",
+    "configure-watch": "node scripts/configure-watch.mjs",
+    "mail-check": "tsx scripts/mail-check.ts"
+  },
+  "dependencies": {
+    "express": "^5.2.1",
+    "openai": "^6.49.0",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^24.13.5",
+    "tsx": "^4.23.13",
+    "typescript": "^5.9.3"
+  }
+}

@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Providence · Review</title><link rel="stylesheet" href="/style.css"><script src="/app.js" defer></script></head>
+<body>
+  <header><a class="wordmark" href="/">◈ PROVIDENCE</a><span class="tag">WATCH → MAC</span><button id="disconnect" hidden>Disconnect</button></header>
+  <main>
+    <section id="connect" class="intro"><p class="eyebrow">YOUR WORDS. YOUR CALL.</p><h1>A little request.<br>A considered action.</h1><p>Speak on your Watch. Review the email here or on your wrist. You decide when it sends.</p><form id="login"><label for="token">Demo session token</label><div class="row"><input id="token" type="password" autocomplete="off" required placeholder="From backend/.env.local"><button class="primary">Connect</button></div></form><p class="fine">The session token stays in this tab’s memory. Your OpenAI key stays on the backend.</p></section>
+    <p id="notice" role="status" aria-live="polite"></p>
+    <section id="workspace" hidden>
+      <div class="section-head"><div><p class="eyebrow">REVIEW DESK</p><h1>From your wrist.</h1></div><p id="connection"></p></div>
+      <div class="layout"><aside><h2>Requests</h2><div id="jobs"></div><form id="typed" hidden><h3>Typed development test</h3><p class="fine">Tests drafting only, not the Watch microphone. Text goes to OpenAI.</p><textarea id="request" rows="4" maxlength="8000" placeholder="Draft an email to Alex asking to test the prototype." required></textarea><button class="primary">Create draft</button></form></aside>
+      <article id="detail"><p class="empty">Your next idea starts with a tap on the Watch.</p></article></div>
+      <p class="fine privacy">Audio passes through your development tunnel to the Mac and OpenAI. Jobs expire after one hour or a backend restart. Send-attempt records remain on the Mac to prevent accidental repeats.</p>
+    </section>
+    <dialog id="confirmation"><p class="eyebrow">FINAL REVIEW</p><h2>Send this exact email?</h2><p id="confirm-from"></p><p id="confirm-to"></p><h3 id="confirm-subject"></h3><pre id="confirm-body"></pre><p class="fine">Apple Mail will send using the configured account. This action cannot be undone here.</p><div class="row"><button id="cancel-send">Keep draft</button><button id="send" class="primary">Send email</button></div></dialog>
+  </main><footer>PROVIDENCE <span>Small interface. Deliberate actions.</span></footer>
+</body></html>

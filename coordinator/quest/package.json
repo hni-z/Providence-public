@@ -1,0 +1,26 @@
+{
+  "name": "providence-quest",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "engines": {
+    "node": ">=22.12"
+  },
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "tsc --noEmit && vite build",
+    "check": "tsc --noEmit",
+    "test": "tsx --test test/*.test.ts"
+  },
+  "dependencies": {
+    "three": "0.186.0"
+  },
+  "devDependencies": {
+    "@types/three": "^0.183.0",
+    "@types/webxr": "^0.5.24",
+    "@types/node": "^22.0.0",
+    "typescript": "^5.9.3",
+    "vite": "^8.3.0",
+    "tsx": "^4.21.0"
+  }
+}

@@ -1,0 +1,9 @@
+node_modules/
+.providence/
+.env*
+!.env.example
+*.log
+web/dist/
+release.json
+*.env
+!*.env.example

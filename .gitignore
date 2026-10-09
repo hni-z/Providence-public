@@ -1,0 +1,43 @@
+.DS_Store
+build/
+DerivedData/
+*.xcuserstate
+xcuserdata/
+.env
+.env.*
+
+# Local dependencies and Python test bytecode
+node_modules
+*.tgz
+*.env
+!*.env.example
+__pycache__/
+!.env.example
+backend/dist/
+WatchStarter/ProvidenceConfig.json
+WatchStarter/ProvidenceCoordinatorConfig.json
+watch-coordinator-adapter/.build/
+.providence/contacts.local.json
+.providence/send-journal/
+.providence/*.local.*
+test-results/
+*.xcarchive/
+*.ipa
+*.mobileprovision
+*.provisionprofile
+*.p12
+*.p8
+*.cer
+*.xcdistributionlogs/
+
+# Private runtime, personal exports, and local handoff bundles
+.providence/
+outputs/
+
+# Local account, device, and runtime records
+*.key
+*.pem
+*.sqlite
+*.sqlite-*
+*.jsonl
+.env.local

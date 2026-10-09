@@ -1,0 +1,283 @@
+// !$*UTF8*$!
+{
+	"archiveVersion" = 1;
+	"classes" = {
+	};
+	"objectVersion" = 77;
+	"objects" = {
+		"000000000000000000000001" = {
+			"isa" = "PBXFileReference";
+			"explicitFileType" = "wrapper.application";
+			"path" = "WatchStarter.app";
+			"sourceTree" = "BUILT_PRODUCTS_DIR";
+		};
+		"000000000000000000000002" = {
+			"isa" = "PBXFileSystemSynchronizedRootGroup";
+			"path" = "WatchStarter";
+			"sourceTree" = "<group>";
+		};
+		"000000000000000000000003" = {
+			"isa" = "PBXGroup";
+			"children" = ("000000000000000000000001", "000000000000000000000010");
+			"name" = "Products";
+			"sourceTree" = "<group>";
+		};
+		"000000000000000000000004" = {
+			"isa" = "PBXGroup";
+			"children" = ("000000000000000000000002", "000000000000000000000003");
+			"sourceTree" = "<group>";
+		};
+		"000000000000000000000005" = {
+			"isa" = "PBXSourcesBuildPhase";
+			"buildActionMask" = 2147483647;
+			"files" = ();
+			"runOnlyForDeploymentPostprocessing" = 0;
+		};
+		"000000000000000000000006" = {
+			"isa" = "PBXFrameworksBuildPhase";
+			"buildActionMask" = 2147483647;
+			"files" = ("00000000000000000000001C");
+			"runOnlyForDeploymentPostprocessing" = 0;
+		};
+		"000000000000000000000007" = {
+			"isa" = "PBXResourcesBuildPhase";
+			"buildActionMask" = 2147483647;
+			"files" = ();
+			"runOnlyForDeploymentPostprocessing" = 0;
+		};
+		"000000000000000000000008" = {
+			"isa" = "XCBuildConfiguration";
+			"name" = "Debug";
+			"buildSettings" = {
+				"CLANG_ENABLE_MODULES" = "YES";
+				"CLANG_ENABLE_OBJC_ARC" = "YES";
+				"SDKROOT" = "watchos";
+				"WATCHOS_DEPLOYMENT_TARGET" = "10.0";
+				"SWIFT_VERSION" = "5.0";
+				"SWIFT_STRICT_CONCURRENCY" = "complete";
+				"DEBUG_INFORMATION_FORMAT" = "dwarf";
+				"ENABLE_TESTABILITY" = "YES";
+				"GCC_OPTIMIZATION_LEVEL" = "0";
+				"SWIFT_OPTIMIZATION_LEVEL" = "-Onone";
+				"SWIFT_ACTIVE_COMPILATION_CONDITIONS" = "DEBUG $(inherited)";
+			};
+		};
+		"000000000000000000000009" = {
+			"isa" = "XCBuildConfiguration";
+			"name" = "Release";
+			"buildSettings" = {
+				"CLANG_ENABLE_MODULES" = "YES";
+				"CLANG_ENABLE_OBJC_ARC" = "YES";
+				"SDKROOT" = "watchos";
+				"WATCHOS_DEPLOYMENT_TARGET" = "10.0";
+				"SWIFT_VERSION" = "5.0";
+				"SWIFT_STRICT_CONCURRENCY" = "complete";
+				"DEBUG_INFORMATION_FORMAT" = "dwarf-with-dsym";
+				"SWIFT_COMPILATION_MODE" = "wholemodule";
+				"SWIFT_OPTIMIZATION_LEVEL" = "-O";
+			};
+		};
+		"00000000000000000000000A" = {
+			"isa" = "XCBuildConfiguration";
+			"name" = "Debug";
+			"buildSettings" = {
+				"CODE_SIGN_STYLE" = "Automatic";
+				"ASSETCATALOG_COMPILER_APPICON_NAME" = "AppIcon";
+				"SKIP_INSTALL" = "YES";
+				"CURRENT_PROJECT_VERSION" = "8";
+				"MARKETING_VERSION" = "1.0";
+				"GENERATE_INFOPLIST_FILE" = "YES";
+				"INFOPLIST_KEY_CFBundleDisplayName" = "Providence";
+                "INFOPLIST_KEY_NSMicrophoneUsageDescription" = "Tap the origami mark to record a voice request. Tap again to send the recording to your paired Providence service for transcription and task execution.";
+				"INFOPLIST_KEY_WKApplication" = "YES";
+				"INFOPLIST_KEY_WKWatchOnly" = "YES";
+				"INFOPLIST_KEY_UISupportedInterfaceOrientations" = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				"PRODUCT_BUNDLE_IDENTIFIER" = "com.example.providence.watchstarter";
+				"PRODUCT_NAME" = "$(TARGET_NAME)";
+				"SUPPORTED_PLATFORMS" = "watchos watchsimulator";
+				"TARGETED_DEVICE_FAMILY" = "4";
+				"LD_RUNPATH_SEARCH_PATHS" = "$(inherited) @executable_path/Frameworks";
+				"ENABLE_PREVIEWS" = "YES";
+				"SWIFT_EMIT_LOC_STRINGS" = "YES";
+			};
+		};
+		"00000000000000000000000B" = {
+			"isa" = "XCBuildConfiguration";
+			"name" = "Release";
+			"buildSettings" = {
+				"CODE_SIGN_STYLE" = "Automatic";
+				"ASSETCATALOG_COMPILER_APPICON_NAME" = "AppIcon";
+				"SKIP_INSTALL" = "YES";
+				"CURRENT_PROJECT_VERSION" = "8";
+				"MARKETING_VERSION" = "1.0";
+				"GENERATE_INFOPLIST_FILE" = "YES";
+				"INFOPLIST_KEY_CFBundleDisplayName" = "Providence";
+                "INFOPLIST_KEY_NSMicrophoneUsageDescription" = "Tap the origami mark to record a voice request. Tap again to send the recording to your paired Providence service for transcription and task execution.";
+				"INFOPLIST_KEY_WKApplication" = "YES";
+				"INFOPLIST_KEY_WKWatchOnly" = "YES";
+				"INFOPLIST_KEY_UISupportedInterfaceOrientations" = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				"PRODUCT_BUNDLE_IDENTIFIER" = "com.example.providence.watchstarter";
+				"PRODUCT_NAME" = "$(TARGET_NAME)";
+				"SUPPORTED_PLATFORMS" = "watchos watchsimulator";
+				"TARGETED_DEVICE_FAMILY" = "4";
+				"LD_RUNPATH_SEARCH_PATHS" = "$(inherited) @executable_path/Frameworks";
+				"ENABLE_PREVIEWS" = "YES";
+				"SWIFT_EMIT_LOC_STRINGS" = "YES";
+			};
+		};
+		"00000000000000000000000C" = {
+			"isa" = "XCConfigurationList";
+			"buildConfigurations" = ("000000000000000000000008", "000000000000000000000009");
+			"defaultConfigurationIsVisible" = 0;
+			"defaultConfigurationName" = "Release";
+		};
+		"00000000000000000000000D" = {
+			"isa" = "XCConfigurationList";
+			"buildConfigurations" = ("00000000000000000000000A", "00000000000000000000000B");
+			"defaultConfigurationIsVisible" = 0;
+			"defaultConfigurationName" = "Release";
+		};
+		"00000000000000000000000E" = {
+			"isa" = "PBXNativeTarget";
+			"buildConfigurationList" = "00000000000000000000000D";
+			"buildPhases" = ("000000000000000000000005", "000000000000000000000006", "000000000000000000000007");
+			"buildRules" = ();
+			"dependencies" = ();
+			"fileSystemSynchronizedGroups" = ("000000000000000000000002");
+			"name" = "WatchStarter";
+			"packageProductDependencies" = ("00000000000000000000001B");
+			"productName" = "WatchStarter";
+			"productReference" = "000000000000000000000001";
+			"productType" = "com.apple.product-type.application";
+		};
+		"00000000000000000000000F" = {
+			"isa" = "PBXProject";
+			"attributes" = {
+				"BuildIndependentTargetsInParallel" = "YES";
+				"LastUpgradeCheck" = "2660";
+				"TargetAttributes" = {
+					"00000000000000000000000E" = {
+						"CreatedOnToolsVersion" = "26.6";
+						"ProvisioningStyle" = "Automatic";
+					};
+				};
+			};
+			"buildConfigurationList" = "00000000000000000000000C";
+			"developmentRegion" = "en";
+			"hasScannedForEncodings" = 0;
+			"knownRegions" = ("en", "Base");
+			"mainGroup" = "000000000000000000000004";
+			"minimizedProjectReferenceProxies" = 1;
+			"packageReferences" = ("00000000000000000000001A");
+			"preferredProjectObjectVersion" = 77;
+			"productRefGroup" = "000000000000000000000003";
+			"projectDirPath" = "";
+			"projectRoot" = "";
+			"targets" = ("00000000000000000000000E", "000000000000000000000018");
+		};
+		"000000000000000000000010" = {
+			"isa" = "PBXFileReference";
+			"explicitFileType" = "wrapper.application";
+			"path" = "Providence.app";
+			"sourceTree" = "BUILT_PRODUCTS_DIR";
+		};
+		"000000000000000000000011" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "000000000000000000000001";
+			"settings" = { "ATTRIBUTES" = ("RemoveHeadersOnCopy"); };
+		};
+		"000000000000000000000012" = {
+			"isa" = "PBXCopyFilesBuildPhase";
+			"buildActionMask" = 2147483647;
+			"dstPath" = "$(CONTENTS_FOLDER_PATH)/Watch";
+			"dstSubfolderSpec" = 16;
+			"files" = ("000000000000000000000011");
+			"name" = "Embed Watch Content";
+			"runOnlyForDeploymentPostprocessing" = 0;
+		};
+		"000000000000000000000013" = {
+			"isa" = "PBXResourcesBuildPhase";
+			"buildActionMask" = 2147483647;
+			"files" = ();
+			"runOnlyForDeploymentPostprocessing" = 0;
+		};
+		"000000000000000000000014" = {
+			"isa" = "PBXContainerItemProxy";
+			"containerPortal" = "00000000000000000000000F";
+			"proxyType" = 1;
+			"remoteGlobalIDString" = "00000000000000000000000E";
+			"remoteInfo" = "WatchStarter";
+		};
+		"000000000000000000000015" = {
+			"isa" = "PBXTargetDependency";
+			"target" = "00000000000000000000000E";
+			"targetProxy" = "000000000000000000000014";
+		};
+		"000000000000000000000016" = {
+			"isa" = "XCBuildConfiguration";
+			"name" = "Debug";
+			"buildSettings" = {
+				"CODE_SIGN_STYLE" = "Automatic";
+				"CURRENT_PROJECT_VERSION" = "8";
+				"MARKETING_VERSION" = "1.0";
+				"GENERATE_INFOPLIST_FILE" = "YES";
+				"INFOPLIST_KEY_CFBundleDisplayName" = "Providence";
+				"PRODUCT_BUNDLE_IDENTIFIER" = "com.example.providence";
+				"PRODUCT_NAME" = "$(TARGET_NAME)";
+				"SDKROOT" = "iphoneos";
+				"SUPPORTED_PLATFORMS" = "iphoneos iphonesimulator";
+				"TARGETED_DEVICE_FAMILY" = "1,2";
+				"SKIP_INSTALL" = "NO";
+			};
+		};
+		"000000000000000000000017" = {
+			"isa" = "XCBuildConfiguration";
+			"name" = "Release";
+			"buildSettings" = {
+				"CODE_SIGN_STYLE" = "Automatic";
+				"CURRENT_PROJECT_VERSION" = "8";
+				"MARKETING_VERSION" = "1.0";
+				"GENERATE_INFOPLIST_FILE" = "YES";
+				"INFOPLIST_KEY_CFBundleDisplayName" = "Providence";
+				"PRODUCT_BUNDLE_IDENTIFIER" = "com.example.providence";
+				"PRODUCT_NAME" = "$(TARGET_NAME)";
+				"SDKROOT" = "iphoneos";
+				"SUPPORTED_PLATFORMS" = "iphoneos iphonesimulator";
+				"TARGETED_DEVICE_FAMILY" = "1,2";
+				"SKIP_INSTALL" = "NO";
+				"VALIDATE_PRODUCT" = "YES";
+			};
+		};
+		"000000000000000000000018" = {
+			"isa" = "PBXNativeTarget";
+			"buildConfigurationList" = "000000000000000000000019";
+			"buildPhases" = ("000000000000000000000013", "000000000000000000000012");
+			"buildRules" = ();
+			"dependencies" = ("000000000000000000000015");
+			"name" = "Providence";
+			"productName" = "Providence";
+			"productReference" = "000000000000000000000010";
+			"productType" = "com.apple.product-type.application.watchapp2-container";
+		};
+		"000000000000000000000019" = {
+			"isa" = "XCConfigurationList";
+			"buildConfigurations" = ("000000000000000000000016", "000000000000000000000017");
+			"defaultConfigurationIsVisible" = 0;
+			"defaultConfigurationName" = "Release";
+		};
+		"00000000000000000000001A" = {
+			"isa" = "XCLocalSwiftPackageReference";
+			"relativePath" = "watch-coordinator-adapter";
+		};
+		"00000000000000000000001B" = {
+			"isa" = "XCSwiftPackageProductDependency";
+			"package" = "00000000000000000000001A";
+			"productName" = "WatchCoordinatorAdapter";
+		};
+		"00000000000000000000001C" = {
+			"isa" = "PBXBuildFile";
+			"productRef" = "00000000000000000000001B";
+		};
+	};
+	"rootObject" = "00000000000000000000000F";
+}

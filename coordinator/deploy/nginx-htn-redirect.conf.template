@@ -1,0 +1,31 @@
+# Legacy HTN hostname: preserve request path/query and the existing renewal challenge route.
+server {
+    listen 80;
+    listen [::]:80;
+    server_name htn.hani.so;
+    location ^~ /.well-known/acme-challenge/ {
+        root /home/developer/htn/acme;
+        default_type text/plain;
+        try_files $uri =404;
+    }
+    location / {
+        return 308 https://providence.hani.so$request_uri;
+    }
+}
+
+server {
+    listen 443 ssl http2;
+    listen [::]:443 ssl http2;
+    server_name htn.hani.so;
+    ssl_certificate /etc/letsencrypt/live/htn.hani.so/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/htn.hani.so/privkey.pem;
+    include /etc/letsencrypt/options-ssl-nginx.conf;
+    location ^~ /.well-known/acme-challenge/ {
+        root /home/developer/htn/acme;
+        default_type text/plain;
+        try_files $uri =404;
+    }
+    location / {
+        return 308 https://providence.hani.so$request_uri;
+    }
+}

@@ -1,0 +1,27 @@
+/* Voice presentation only; availability and recorder ownership stay in BrowserVoice. */
+.voice-screen-surface .voice-circle { background: #f3f3f3; color: #1c1c1c; }
+.voice-screen-surface .voice-circle-symbol { width: 34px; height: 34px; pointer-events: none; }
+.voice-screen-surface .voice-circle:disabled { background: #c8c8c8; color: #606060; }
+.voice-screen-surface .voice-circle:focus-visible { outline-offset: 9px; }
+.voice-screen-surface .voice-screen-help { min-height: 44px; max-width: 410px; }
+.voice-screen-surface .voice-screen-controls { align-items: center; gap: 9px; }
+.voice-screen-surface .voice-screen-controls .button { min-height: 44px; font-size: 12px; gap: 7px; padding: 10px 14px; border: 1px solid var(--line); }
+.voice-screen-surface .voice-screen-controls .button[aria-pressed="true"] { border-color: var(--muted); background: var(--surface-selected); }
+.voice-screen-surface .voice-info-icon { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; min-width: 32px; color: var(--muted); }
+.voice-screen-surface .voice-screen-alert { width: 100%; max-width: 480px; padding: 12px 15px; margin: 16px 0 0; border: 1px solid var(--line); border-radius: 10px; color: var(--text-strong); background: var(--surface); font-size: 13px; line-height: 1.6; text-align: left; overflow-wrap: anywhere; }
+.voice-screen-surface .voice-session-stop-help,
+.voice-screen-surface .voice-replies-muted { max-width: 380px; color: var(--muted); font-size: 12px; line-height: 1.6; margin: 13px 0 0; }
+.voice-screen-surface .voice-stage-note { max-width: 460px; font-size: 13px; margin: 14px 0 0; }
+.voice-screen-surface .voice-screen-transcript p.voice-transcript-empty { color: var(--muted); font-size: 14px; }
+.voice-screen-surface .voice-screen-reply .button { min-height: 44px; }
+.voice-screen-surface .voice-job-history > button { min-height: 54px; font-size: 13px; }
+.voice-screen-surface .voice-job-history > button small { font-size: 12px; }
+.voice-screen-surface .voice-screen-content h2 { font-size: 13px; }
+@media(max-width:480px) {
+  .voice-screen-surface .voice-screen-stage { padding-top: 24px; }
+  .voice-screen-surface .voice-screen-controls { max-width: 100%; gap: 8px; }
+  .voice-screen-surface .voice-screen-controls .button { padding-inline: 12px; }
+  .voice-screen-surface .voice-screen-help { font-size: 13px; }
+  .voice-screen-surface .voice-screen-transcript p { font-size: 16px; }
+  .voice-screen-surface .voice-screen-reply { padding: 18px; }
+}
